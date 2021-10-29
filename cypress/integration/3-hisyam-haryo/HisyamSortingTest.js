@@ -5,9 +5,16 @@
 //Akun          : problem_User
 
 it.only('Saucedemo test', function(){
-    cy.visit('https://www.saucedemo.com/')   
-    cy.get('#user-name.input_error.form_input').type('problem_user')
-    cy.get('#password.input_error.form_input').type('secret_sauce')
-    cy.get('#login-button.submit-button.btn_action').click()
+    cy.visit('https://www.saucedemo.com/')
+       
+    cy.get('#user-name.input_error.form_input')
+    .type('problem_user')
+
+    cy.get('#password.input_error.form_input')
+    .type('secret_sauce')
+
+    cy.get('#login-button.submit-button.btn_action')
+    .click()
+
     cy.get('.product_sort_container ').select('az').should('have.value', 'az')
 })
