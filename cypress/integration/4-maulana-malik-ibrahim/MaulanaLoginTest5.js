@@ -10,6 +10,8 @@ it.only('Saucedemo test', function(){
     cy.get('#user-name.input_error.form_input')
     .type('STANDARD_USER') //change to UPPERCASE username
 
+
+    
     cy.get('#password.input_error.form_input')
     .type('secret_sauce')
 
