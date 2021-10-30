@@ -3,10 +3,6 @@
     "version": "1.0.0",
     "description": "Cypress Project",
     "main": "index.js",
-    "dependencies": {
-        "cypress": "^8.7.0"
-    },
-    "devDependencies": {},
     "scripts": {
         "test": "test",
         "cypress:open": "cypress open"
@@ -19,5 +15,8 @@
         "framework"
     ],
     "author": "Faris Ikhlasul H",
-    "license": "ISC"
+    "license": "ISC",
+    "devDependencies": {
+        "cypress": "^8.7.0"
+    }
 }
