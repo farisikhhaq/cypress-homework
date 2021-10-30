@@ -11,8 +11,7 @@ it.only('Saucedemo test', function(){
     .type('standard_user')
 
     cy.get('#password.input_error.form_input')
-    .type('secret_sauce22')
-    // .type('secret_sauce22') //Change to invalid password
+    .type('secret_sauce22') //Change to invalid password
 
     cy.get('#login-button.submit-button.btn_action')
     .click()
