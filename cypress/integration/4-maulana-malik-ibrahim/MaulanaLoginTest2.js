@@ -2,9 +2,7 @@
 //No Absen/NIM  : 12 / 1941720055
 //Kelas         : TI-3A
 //Test Case     : Login 
-//Akun          : standard_User
-
-
+//Account          : standard_User
 it.only('Saucedemo test', function(){
     cy.visit('https://www.saucedemo.com/')
        
