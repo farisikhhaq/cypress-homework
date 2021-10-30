@@ -8,7 +8,7 @@ it.only('Saucedemo test', function(){
     cy.visit('https://www.saucedemo.com/')
        
     cy.get('#user-name.input_error.form_input')
-    .type('standard_user')
+    .type('standard_user') //correct username
 
     cy.get('#password.input_error.form_input')
     .type('secret_sauce22') //Change to invalid password
