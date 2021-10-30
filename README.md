@@ -1,7 +1,8 @@
-# CYPRESS HOMEWORK PENGUJIAN PERANGKAT LUNAK
-Cypress Test Group 3
+# CYPRESS MID TEST PENGUJIAN PERANGKAT LUNAK
 
-## Nama Anggota Kelompok
+# TI-3A
+
+## Nama Anggota Kelompok 3
 
 ```
 FARIS IKHLASUL HAQ		        1941720062 /07
