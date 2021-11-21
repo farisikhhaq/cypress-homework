@@ -7,18 +7,16 @@ jobs:
     runs-on: ubuntu-20.04
     name: Node14
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
         with:
-          ref: ${{github.event.pull_request.head.ref}}
-          repository: ${{github.event.pull_request.head.repo.full_name}}
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-          cache: 'npm'
-          cache-dependency-path: .github/test/package-lock.json
-      - run: npm install --prefix ./
+          node-version: '14'
+      - uses: bahmutov/npm-install@v1
+      - run: npm run build
       - run: npm test --prefix cypress/integration/3-hisyam-haryo
-    
+      - run: npm run check:markdown
+  
     tests:
     runs-on: ubuntu-20.04
     steps:
