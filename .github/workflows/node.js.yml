@@ -16,8 +16,8 @@ jobs:
           node-version: '16'
           cache: 'npm'
           cache-dependency-path: .github/test/package-lock.json
-      - run: npm install --prefix .github/test
-      - run: npm test --prefix .github/test
+      - run: npm install --prefix ./
+      - run: npm test --prefix cypress/integration/3-hisyam-haryo
     
     tests:
     runs-on: ubuntu-20.04
