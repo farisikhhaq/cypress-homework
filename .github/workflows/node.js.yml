@@ -26,9 +26,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '14'
-      - uses: bahmutov/npm-install@v1
-      - run: npm run format
-      - run: npm run build
+      - run : npm install ---prefix cypress/integration/3-hisyam-haryo
+      - run: npm run format --prefix cypress/integration/3-hisyam-haryo
+      - run: npm run build --prefix cypress/integration/3-hisyam-haryo
       - run: npm test --prefix cypress/integration/3-hisyam-haryo
       - run: npm run check:markdown
 
