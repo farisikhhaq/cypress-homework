@@ -14,15 +14,3 @@ jobs:
           node-version: '14'
       - uses: bahmutov/npm-install@v1
       - run: npm run --prefix cypress/integration/3-hisyam-haryo
-
-      tests:
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Cypress info
-        uses: ./
-        with:
-          build: npx cypress info
-          working-directory: /.
