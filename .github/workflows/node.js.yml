@@ -2,6 +2,21 @@ name: main
 on: [push]
 
 jobs:
+  build-and-test-node12:
+    runs-on: ubuntu-20.04
+    name: Node12
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - uses: bahmutov/npm-install@v1
+      - run: npm run format
+      - run: npm run build
+      - run: npm test
+      - run: npm run check:markdown
+
   build-and-test-node14:
     runs-on: ubuntu-20.04
     name: Node14
@@ -12,15 +27,15 @@ jobs:
         with:
           node-version: '14'
       - uses: bahmutov/npm-install@v1
-      - run: npm run format 
-      - run: npm run build 
+      - run: npm run format --prefix cypress/integration/3-hisyam-haryo
+      - run: npm run build --prefix cypress/integration/3-hisyam-haryo
       - run: npm test --prefix cypress/integration/3-hisyam-haryo
       - run: npm run check:markdown
 
   release:
     runs-on: ubuntu-20.04
     name: release
-    needs: [build-and-test-node12, build-and-test-node14]
+    needs: [build-and-test-node14]
     # only release from the master branch
     if: github.ref == 'refs/heads/master'
     steps:
