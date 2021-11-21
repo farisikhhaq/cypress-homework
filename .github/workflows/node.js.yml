@@ -13,6 +13,5 @@ jobs:
         with:
           node-version: '14'
       - uses: bahmutov/npm-install@v1
-      - run: npm run build
       - run: npm test --prefix cypress/integration/3-hisyam-haryo
       - run: npm run check:markdown
