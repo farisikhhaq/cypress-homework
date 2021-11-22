@@ -5,7 +5,7 @@ jobs:
 
   build-and-test-node14:
     runs-on: ubuntu-20.04
-    name: Node14
+    name: Testing dengan Github
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: '14'
       - uses: bahmutov/npm-install@v1
-      - run: npm run --prefix cypress/integration/3-hisyam-haryo
+      - run: npm run --prefix cypress/integration
       - uses: cypress-io/github-action@v2
         with:
           browser: chrome
