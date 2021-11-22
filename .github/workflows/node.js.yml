@@ -12,9 +12,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '14'
-          browser: firefox
       - uses: bahmutov/npm-install@v1
       - run: npm run --prefix cypress/integration/3-hisyam-haryo
-
-  
-    
+      - uses: cypress-io/github-action@v2
+        with:
+          browser: chrome
