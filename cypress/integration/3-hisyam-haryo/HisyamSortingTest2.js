@@ -17,5 +17,5 @@ it.only('Saucedemo test', function(){
     .click()
     
     cy.get('.product_sort_container ')
-    .select('za').should('have.value', 'za')
+    .select('za').should('have.value', 'az')
 })
